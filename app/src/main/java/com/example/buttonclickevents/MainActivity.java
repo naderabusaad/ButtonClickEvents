@@ -2,6 +2,8 @@ package com.example.buttonclickevents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ implements View.OnClickListener {
 
     TextView txtView;
     Button button1, button2, button3;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ implements View.OnClickListener {
         button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);
 
+        intent = new Intent(this,SecondActivity.class);
         button3 = findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener()
         {
@@ -36,6 +40,7 @@ implements View.OnClickListener {
                         "Welcome to Android",Toast.LENGTH_LONG);
                 toast.setMargin(50,450);
                 toast.show();
+                startActivity(intent);
             }
         });
     }
@@ -45,10 +50,13 @@ implements View.OnClickListener {
     {
         switch (view.getId()) {
             case R.id.button1:
+                txtView.setTextColor(Color.rgb(0,0,255));
                 txtView.setText("Welcome to Android!");
+                txtView.setTextColor(Color.rgb(0,0,255));
                 break;
             case R.id.button2:
-                txtView.setText("Mobile App Development!");
+
+                txtView.setTextColor(Color.rgb(0,255,0));
                 break;
         }
     }

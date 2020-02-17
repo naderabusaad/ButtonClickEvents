@@ -10,26 +10,43 @@
         android:id="@+id/button"
         android:layout_width="243dp"
         android:layout_height="78dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="36dp"
         android:drawableStart="@drawable/ic_access_alarms_black_24dp"
         android:drawableLeft="@drawable/ic_access_alarms_black_24dp"
         android:gravity="center"
+        android:onClick="displayTime"
         android:text="Display Time"
         android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="172dp"
-        android:layout_height="99dp"
+        android:layout_width="185dp"
+        android:layout_height="116dp"
+        android:layout_marginBottom="116dp"
+        android:background="#FFFFFF"
+        android:onClick="gotoHome"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="302dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="164dp"
+        android:gravity="center"
+        android:text="Current Time"
+        android:textSize="24sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
