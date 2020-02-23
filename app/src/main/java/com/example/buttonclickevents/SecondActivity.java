@@ -1,6 +1,8 @@
 package com.example.buttonclickevents;
 
 import androidx.appcompat.app.AppCompatActivity;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,8 +29,10 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void displayTime(View view) {
-        Date currentTime = Calendar.getInstance().getTime();
-        txtView.setText(currentTime.toString());
+        SimpleDateFormat formatter =
+                new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        txtView.setText(formatter.format(date));
     }
 
     public void gotoHome(View view) {
